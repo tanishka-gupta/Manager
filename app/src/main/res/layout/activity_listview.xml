@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Single List Item Design -->
+<LinearLayout android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="10sp" android:paddingRight="10sp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingTop="2sp">
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/noti_ontime"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:textStyle="bold"
+    android:textSize="14sp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+     ></TextView>
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/noti_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        >
+</TextView>
+</LinearLayout>

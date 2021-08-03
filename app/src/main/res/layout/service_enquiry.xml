@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/sclDetail_enq" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:fadeScrollbars="true">
+        <LinearLayout android:orientation="vertical" android:id="@+id/lytContent_enq" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="14sp" android:id="@+id/edtName_enq" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="@string/your_name" android:inputType="textCapWords"/>
+            <EditText android:textSize="14sp" android:id="@+id/edtPhone_enq" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="@string/phone_number" android:inputType="phone"/>
+            <EditText android:textSize="14sp" android:id="@+id/edtEmail_enq" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="Email" android:inputType="textCapWords"/>
+            <EditText android:textSize="14sp" android:id="@+id/edtAlamat_enq" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="@string/address" android:ems="10" android:inputType="textPostalAddress"/>
+            <EditText android:textSize="14sp" android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/edtComment_enq" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:hint="Complain" android:lines="4" android:inputType="textMultiLine"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Spinner android:entries="@array/shipping_array" android:id="@+id/spinner1" android:layout_width="200dp" android:layout_height="wrap_content"/>
+                <EditText android:textSize="14sp" android:textColor="#fff" android:id="@+id/edtName2" android:background="@drawable/no_color" android:padding="7dp" android:visibility="invisible" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:ems="10" android:editable="false" android:layout_weight="1" android:inputType="text"/>
+            </LinearLayout>
+
+            <TextView android:padding="7dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Category:"/>
+            <Spinner android:id="@+id/categorySpinner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <Button android:textSize="14sp" android:textColor="@color/white" android:id="@+id/buttonChoose" android:background="@color/header" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Attach Image"/>
+            <ImageView android:id="@+id/imageView" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:src="@drawable/no_color" android:layout_weight="1"/>
+            <Button android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text" android:id="@+id/btnSend_enq" android:background="@color/header" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Send Data"/>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:id="@+id/prgLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    <TextView android:textSize="14sp" android:id="@+id/txtAlert" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alert" android:layout_centerInParent="true"/>
+</RelativeLayout>

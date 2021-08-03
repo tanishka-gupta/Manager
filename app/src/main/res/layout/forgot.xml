@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/homebg"
+    >
+
+    <ScrollView
+        android:id="@+id/sclDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="true"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/lytContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/border"
+            android:layout_margin="20dp"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/header"
+                android:text="Forgot Pin?"
+                android:textSize="22sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/titleForm"
+                ></TextView>
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:id="@+id/userRadioGroup"
+                android:layout_weight=".07"
+                android:visibility="gone"
+
+                android:checkedButton="@+id/sound" >
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioFreelancer"
+                    android:layout_weight="0.5"
+                    android:checked="true"
+                    android:text="Freelancer" />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioFranchise"
+
+
+                    android:layout_weight="0.5"
+                    android:text="Franchise" />
+
+
+
+
+
+
+
+
+
+
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter Phone Number"
+                android:inputType="phone"
+                android:padding="7dp"
+                android:textSize="14sp"
+                style="@style/MyTextViewStyle"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                >
+            </EditText>
+
+
+            <Button
+                android:id="@+id/btnSend1"
+
+                android:layout_margin="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/mybutton"
+                android:text="REQUEST PIN"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:layout_marginLeft="10dp"
+                android:textAllCaps="true"
+
+                />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold|italic"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/header"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="You'll recieve your NEW 4 DIGIT PIN via SMS on your registered mobile number."
+                />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPassword"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/txtAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/alert"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+
+
+
+</RelativeLayout>

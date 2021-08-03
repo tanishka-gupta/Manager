@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="header">#ED3237</color>
+    
+    <color name="text">#ffffff</color>
+    <color name="shadow">#505050</color>
+    <color name="background">#2c1f1a</color>
+    <color name="caption">#372721</color>
+    <color name="copyright">#503b32</color>
+    <color name="setting_devider">#503b32</color>
+    <color name="hint">#767676</color>
+    <color name="subtext">#bdbdbd</color>
+    <color name="image_background">#999999</color>`
+    <color name="background_actionbar">#ED3237</color>
+    <color name="detail_background">#372721</color>
+    <color name="list_item_title">#fff</color>
+
+    <!-- background menu -->
+    <color name="list_background">#ffffff</color>
+    <!-- background menu dipencet -->
+    <color name="list_background_pressed">#e3f2ff</color>
+
+    <!-- jarak antar menu -->
+    <color name="list_divider">#C3C3C3</color>
+
+    <!-- app background -->
+    <color name="app_bg">#EEEEEE</color>
+
+    <!-- divider -->
+    <color name="divider">#ED3237</color>
+    <color name="btn_bg">#ED3237</color>
+    <color name="btn_text">#FFFFFF</color>
+    <color name="form_bg">#FFFFFF</color>
+    <color name="form_border">#800000</color>
+    
+    <color name="white">#ffffff</color>
+    
+    
+    <color name="apptheme_primary">#ED3237</color>
+    <color name="apptheme_primary_dark">#ED3237</color>
+    <color name="apptheme_accent">@android:color/white</color>
+
+    <color name="gradient_start">#50b6aa90</color>
+    <color name="gradient_light_start">#30b6aa90</color>
+
+
+<!--    splash screen-->
+
+    <color name="yellow">#fada5e</color>
+
+</resources>

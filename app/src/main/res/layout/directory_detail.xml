@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:id="@+id/detailLayout"
+    android:orientation="vertical"
+    >
+
+    <WebView
+        android:id="@+id/webAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:background="#ffffff"
+        android:layout_marginBottom="0dp"
+        android:visibility="gone"
+
+
+
+        />
+
+    <ScrollView
+        android:id="@+id/sclDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/lytContent"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:layout_margin="0dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/loading"
+                android:visibility="gone"
+                android:layout_margin="30dp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:text="aa"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/txtSubText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="aa"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+
+
+
+
+            <WebView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:textSize="14sp"
+                android:background="@drawable/border_shadow2"
+
+                android:visibility="visible"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="« PREV"
+                    android:background="@drawable/mybutton"
+                    android:textColor="@color/text"
+                    android:layout_weight="0.25"
+                    android:textSize="13sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/btnPrevJob"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VIEW CV"
+                    android:background="@drawable/mybutton"
+                    android:textColor="@color/text"
+                    android:layout_weight="0.25"
+                    android:textSize="13sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/btnView"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REMOVE CV"
+                    android:background="@drawable/mybutton"
+                    android:textColor="@color/text"
+                    android:layout_weight="0.25"
+                    android:textSize="13sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/btnCallNow"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    />
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NEXT »"
+                    android:background="@drawable/mybutton"
+                    android:textColor="@color/text"
+                    android:layout_weight="0.25"
+                    android:textSize="13sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/btnNextJob"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/txtAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/alert"
+        android:textSize="14sp"
+        android:visibility="gone" />
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="10dp"
+        android:src="@drawable/btn_buy"
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <!-- <Button
+         /> -->
+
+
+
+
+
+</LinearLayout>

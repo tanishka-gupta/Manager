@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.manager.loanchacha" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="15" />
+
+
+    <!-- GCM connects to Google Services. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="in.manager.loanchacha.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="in.manager.loanchacha.permission.C2D_MESSAGE" />
+    <!-- This app has permission to register and receive dataf message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="in.manager.loanchacha.MyApplication"
+
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme2"
+        android:networkSecurityConfig="@xml/network_security_config"
+
+        >
+
+        <uses-library android:name="org.apache.http.legacy"  />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="in.manager.loanchacha.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <activity
+            android:name="in.manager.loanchacha.ActivitySplash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="in.manager.loanchacha.MESSAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.manager.loanchacha.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"
+
+            android:windowSoftInputMode="stateHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.manager.loanchacha.ActivityCategoryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityEntCategoryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityEntList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityEntDetail"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityDirectoryList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityDirectoryDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityBlogCategoryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityVideoGalleryCategoryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityVideoGalleryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityGalleryCategoryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityGalleryList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityDownloadsList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityLeadsList"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="in.manager.loanchacha.ActivitySubCategoryList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityMenuList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityMenuBulk"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityNoticesList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivitySchedulesList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityBlogList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityEventList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityMenuSearchList"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="in.manager.loanchacha.ActivitySignup"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityForgotPassword"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityMenuDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityMenuGalleryDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityNoticesDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivitySchedulesDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityBlogDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityEventDetail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityVideoGalleryDetail"
+            android:screenOrientation="landscape" />
+
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityGalleryDetail"
+             />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityPayOnline"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityPayu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityCart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityCheckout"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityLogin"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityCheckoutAsk"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityNotification"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityEnquiry"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityServiceForm"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityServiceEnquiry"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityContact"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityNoInternet"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityAddLead"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityConfirmMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityFailureMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityConfirmEnquiry"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.manager.loanchacha.ActivityAbout"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityDevelopers"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityFaq"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityFees"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityCamps"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityCrisis"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.manager.loanchacha.ActivityForms"
+            android:screenOrientation="portrait" />
+
+
+
+
+
+
+
+
+
+
+
+    </application>
+
+</manifest>

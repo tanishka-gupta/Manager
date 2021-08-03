@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+    
+	   <LinearLayout
+	        android:id="@+id/lytSearch"
+	        android:layout_width="fill_parent"
+	        android:layout_height="45dp"
+	        android:background="@color/header"
+	        android:gravity="center_vertical"
+	        android:visibility="gone" >
+
+	        <EditText
+	            android:id="@+id/edtKeyword"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginLeft="5dp"
+	            android:layout_weight="1"
+	            android:background="@drawable/search_form"
+	            android:hint="@string/search"
+	            android:padding="7dp"
+	            android:textColor="@color/hint"
+	            android:textSize="14sp"
+	            android:inputType="text"
+	            android:singleLine="true" />
+
+	        <ImageButton
+	            android:id="@+id/btnSearch"
+	            android:layout_width="150dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="3"
+	            android:background="@color/header"
+	            android:src="@drawable/ic_search" />
+
+	   </LinearLayout>
+
+       <!--  <ListView
+            android:visibility="gone"
+            android:id="@+id/listMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytSearch"
+            android:divider="@null"
+            android:padding="5dp" /> -->
+
+
+
+
+	    <ProgressBar
+	        android:id="@+id/prgLoading"
+		    android:layout_height="wrap_content" 
+		    android:layout_width="wrap_content"
+		    android:layout_centerInParent="true" />
+	    <TextView 
+			android:id="@+id/txtAlert"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/not_found"
+			android:textSize="14sp"
+			android:layout_centerInParent="true"
+			android:visibility="gone"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="top"
+		android:orientation="horizontal"
+		android:layout_marginBottom="50dp"
+
+
+		>
+
+		<GridView
+			android:id="@+id/listMenu"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:divider="@null"
+			android:numColumns="1"
+			android:visibility="gone"
+			android:layout_below="@+id/lytSearch"
+
+			android:background="@drawable/bgp"
+			android:padding="5dp"
+			/>
+
+		</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="bottom"
+		android:orientation="horizontal"
+		android:layout_marginTop="30dp"
+
+		>
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="« PREV"
+			android:background="@drawable/mybutton"
+			android:textColor="@color/text"
+			android:layout_weight="0.25"
+			android:textSize="13sp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:id="@+id/btnPrevJob"
+			/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="VIEW CV"
+			android:background="@drawable/mybutton"
+			android:textColor="@color/text"
+			android:layout_weight="0.25"
+			android:textSize="13sp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:id="@+id/btnView"
+			android:textAllCaps="true"
+			android:visibility="gone"
+			/>
+
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="REMOVE CV"
+			android:background="@drawable/mybutton"
+			android:textColor="@color/text"
+			android:layout_weight="0.25"
+			android:textSize="13sp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:id="@+id/btnCallNow"
+			android:textAllCaps="true"
+			android:visibility="gone"
+			/>
+
+
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="NEXT »"
+			android:background="@drawable/mybutton"
+			android:textColor="@color/text"
+			android:layout_weight="0.25"
+			android:textSize="13sp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:id="@+id/btnNextJob"
+			/>
+
+
+
+
+	</LinearLayout>
+
+
+</RelativeLayout>

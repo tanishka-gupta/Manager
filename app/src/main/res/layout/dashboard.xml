@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/red"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:background="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/pink"
+        android:layout_width="195dp"
+        android:layout_height="195dp"
+        android:layout_weight="1"
+        android:background="@drawable/pink" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+
+        <ImageView
+            android:id="@+id/pink2"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:background="@drawable/pink" />
+        <ImageView
+            android:id="@+id/red2"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:background="@drawable/red" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/red3"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:background="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/pink3"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_weight="1"
+            android:background="@drawable/pink" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <LinearLayout
+        android:id="@+id/earning"
+        android:layout_marginTop="35dp"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+        android:background="@drawable/dashboardbutton">
+
+            <TextView
+            android:id="@+id/earn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="yearning" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/deshboard"
+            android:layout_marginTop="35dp"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/dashboardbutton">
+
+            <TextView
+                android:id="@+id/desh"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="deshboard" />
+
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

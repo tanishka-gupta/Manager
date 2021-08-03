@@ -1,0 +1,308 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/homebg"
+    android:scrollbars="vertical"
+    android:padding="0dp" >
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp"
+
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/lytSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#222222"
+        android:gravity="center_vertical"
+
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/edtKeyword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_form"
+            android:hint="@string/search"
+            android:padding="7dp"
+            android:textColor="@color/hint"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="#222222"
+            android:src="@drawable/ic_search" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/lytSearch"
+        >
+
+
+
+
+
+
+
+        <WebView
+            android:id="@+id/txtSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:textSize="14sp" />
+
+        <in.manager.loanchacha.ExpandableHeightGridView
+            android:id="@+id/listCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:divider="@null"
+            android:numColumns="4"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/txtSlider"
+
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="#222222"
+            android:textColor="#fff"
+            android:text="Welcome"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="0dp"
+            android:id="@+id/txtUser"
+
+            />
+
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/image_header"
+            android:onClick="callNow"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="@color/header"
+            android:textColor="#fff"
+            android:text="Welcome to Fotokwik Mobile App. The best studio in Raipur"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="0dp"
+            android:id="@+id/txtHeading"
+
+            />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="#222222"
+            android:textColor="#fff"
+            android:text="What We Offer"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+
+
+
+
+
+            />
+
+        <in.manager.loanchacha.ExpandableHeightGridView
+            android:id="@+id/listNewCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:numColumns="3"
+            android:visibility="gone"
+
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="#222222"
+            android:textColor="#fff"
+            android:text="Priority Services"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+
+
+
+
+            />
+
+        <in.manager.loanchacha.ExpandableHeightGridView
+            android:id="@+id/listMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:numColumns="2"
+
+            android:visibility="gone"
+
+
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:background="@drawable/bbg2"
+            android:textColor="#fff"
+            android:text=""
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="30dp"
+
+
+            android:layout_marginBottom="0dp"
+            android:typeface="serif"
+            android:textStyle="bold|italic"
+            android:id="@+id/thought"
+            android:visibility="gone"
+
+
+            />
+
+        <!-- new arrival -->
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mapimg"
+            android:clickable="true"
+            android:src="@drawable/samtamap"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:background="@color/header"
+            android:textColor="#fff"
+            android:text=""
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/notice_heading"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text=""
+            android:layout_gravity="center_horizontal"
+
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:id="@+id/txtNotice"
+            android:visibility="gone"
+
+            android:layout_marginBottom="0dp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="1sp"
+            android:background="@color/header"
+            android:textColor="@color/header"
+            android:text=" "
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prgLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/txtAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/alert"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    </RelativeLayout></ScrollView>
+
+</RelativeLayout>
